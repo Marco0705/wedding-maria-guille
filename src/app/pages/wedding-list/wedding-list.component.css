@@ -1,0 +1,133 @@
+.wedding-list-container {
+  min-height: 100vh;
+  background-color: #f2f1ee;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  color: #333;
+}
+
+.main-title {
+  font-weight: 400;
+  color: #333;
+  letter-spacing: 0.15em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: #555;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  gap: 2rem;
+}
+
+.text-section {
+  flex: 1;
+  text-align: left;
+}
+
+.account-text {
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.account-number {
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  white-space: nowrap; /* Prevent line breaks for the whole number */
+}
+
+.illustration {
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.japon-img {
+  width: 300px; /* Adjusted for better responsiveness and visual balance */
+  height: auto;
+  display: block; /* Ensures image behaves as a block element for margin auto */
+  margin: 0 auto; /* Center image within its container */
+}
+
+.signature-section {
+  margin-top: 3rem;
+}
+
+.signature {
+  margin-bottom: 3rem;
+}
+
+.names-img {
+  width: 300px; /* Adjust width as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center signature image */
+}
+
+.thanks {
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-title {
+    letter-spacing: 2px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section {
+    text-align: center;
+  }
+
+  .illustration {
+    margin-top: 2rem;
+  }
+
+  .japon-img {
+    width: 120px; /* Further reduce size for smaller screens */
+  }
+
+  .names-img {
+    width: 150px; /* Further reduce size for smaller screens */
+  }
+
+  .wedding-list-container {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .japon-img {
+    width: 100px; /* Smallest size for very small screens */
+  }
+
+  .names-img {
+    width: 120px; /* Smallest size for very small screens */
+  }
+}

@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #f2f1ee;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+       font-family: 'Inter', sans-serif;
+    font-size: 14px;
+  }
+  

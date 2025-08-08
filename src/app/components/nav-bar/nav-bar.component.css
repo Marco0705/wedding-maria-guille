@@ -1,0 +1,43 @@
+.navbar {
+    text-align: center;
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+  
+    a {
+      text-decoration: none;
+      color: black;
+      position: relative;
+      font-weight: 500;
+  
+  
+      &.active::after {
+        content: '';
+        display: block;
+        height: 2px;
+        background-color: black;
+        width: 100%;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px; /* Margen izquierdo y derecho para móviles */
+
+    ul {
+      flex-direction: column; /* Opcional: mostrar los links en columna */
+      align-items: flex-start; /* Alinearlos a la izquierda */
+      gap: 1rem;
+    }
+  }
+}
+
+  }
+  

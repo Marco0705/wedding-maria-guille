@@ -1,0 +1,91 @@
+<div class="d-flex justify-content-center mb-4">
+  <app-nav-bar></app-nav-bar>
+</div>
+
+<div class="form-page-container">
+  <div class="form-header-text">
+    <h1>CONFIRMACIÓN</h1>
+    <p class="form-subtitle">
+      Nos encantaría contar con vuestra presencia en este día tan especial. Por
+      favor, confirmad vuestra asistencia.
+    </p>
+  </div>
+
+  <div class="form-card">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-field">
+        <label for="nombreCompleto">NOMBRE COMPLETO</label>
+        <input type="text" id="nombreCompleto" formControlName="nombreCompleto"
+          [class.error]="hasError('nombreCompleto')" />
+        <div *ngIf="hasError('nombreCompleto')" class="error-message">
+          {{ getErrorMessage("nombreCompleto") }}
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="acompanante">ACOMPAÑANTE</label>
+        <input type="text" id="acompanante" formControlName="acompanante" placeholder="Si no vas acompañado/a, puedes dejar este campo vacío" />
+      </div>
+
+      <div class="form-field">
+        <label for="direccion">DIRECCIÓN</label>
+        <input type="text" id="direccion" placeholder="Calle, número, puerta, CP, Municipio Ciudad" formControlName="direccion" [class.error]="hasError('direccion')" />
+        <div *ngIf="hasError('direccion')" class="error-message">
+          {{ getErrorMessage("direccion") }}
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="alergias">ALERGIAS O INTOLERANCIAS</label>
+        <textarea id="alergias" formControlName="alergias" rows="3"
+          placeholder="Si no tienes alergias o intolerancias, puedes dejar este campo vacío"></textarea>
+      </div>
+
+      <!-- Servicio de Autobuses -->
+      <div class="form-field radio-group-container">
+        <label>¿UTILIZARÁS EL SERVICIO DE AUTOBUSES?</label>
+        <div class="radio-options" [class.error]="hasError('busOption')">
+          <div class="radio-option">
+            <input type="radio" id="busSi" formControlName="busOption" value="Sí" />
+            <label for="busSi">Sí</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="busNo" formControlName="busOption" value="No" />
+            <label for="busNo">No</label>
+          </div>
+        </div>
+        <div *ngIf="hasError('busOption')" class="error-message">
+          {{ getErrorMessage("busOption") }}
+        </div>
+      </div>
+
+      <!-- Parada del Autobús: SOLO si eligen 'Sí' -->
+      <div *ngIf="form.get('busOption')?.value === 'Sí'" class="form-field radio-group-container">
+        <label>PARADA DEL AUTUBUS</label>
+        <div class="radio-options">
+          <div class="radio-option">
+            <input type="radio" id="majadahonda" formControlName="busStop" value="Majadahonda" />
+            <label for="majadahonda">Majadahonda</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="moncloa" formControlName="busStop" value="Moncloa" />
+            <label for="moncloa">Moncloa</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="bernabeu" formControlName="busStop" value="Bernabeu" />
+            <label for="bernabeu">Bernabeu</label>
+          </div>
+          
+        </div>
+        <div *ngIf="form.get('busOption')?.value === 'Sí' && hasError('busStop')" class="error-message">
+            Debes seleccionar una parada de autobús.
+          </div>
+      </div>
+
+      <button type="submit" class="submit-button" [disabled]="isSubmitting">
+        <span *ngIf="!isSubmitting">CONFIRMAR ASISTENCIA</span>
+        <span *ngIf="isSubmitting">ENVIANDO...</span>
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  color: #111;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Línea vertical centrada */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 40px;
+  position: relative;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: black;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Punto sobre la línea */
+.dot {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Lados */
+.left-block,
+.right-block {
+  width: 45%;
+}
+
+/* Separación de autobuses */
+.block-after-ceremony {
+  margin-top: 160px;
+}
+
+.icon-iglesia {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.icon-iglesia img {
+  display: block;
+  width: 160px; 
+  height: auto;
+  border: none;
+  background: none;
+}
+
+.icon-finca {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.icon-finca img {
+  display: block;
+  width: 300px; 
+  height: auto;
+  border: none;
+  background: none;
+}
+
+/* Textos */
+.info {
+  margin-bottom: 6px;
+}
+
+.info.time {
+  font-weight: bold;
+}
+
+.info.title {
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+/* Box estilo texto destacado */
+.box {
+  margin-top: 10px;
+  padding-left: 8px;
+}
+
+/* Bloque final */
+.final-block {
+  text-align: center;
+  padding: 60px 20px 100px;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.final-block::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -100px;
+  height: 100px;
+  width: 2px;
+  background-color: black;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 40px 20px;
+    padding-left: 40px; /* Añadido para más margen izquierdo */
+  }
+
+  .left-block,
+  .right-block {
+    width: 100%;
+  }
+
+  .container::before {
+    left: 20px;
+  }
+
+  .dot {
+    left: 20px;
+    transform: translateX(0);
+  }
+
+  .final-block::before {
+    left: 20px;
+    transform: translateX(0);
+  }
+
+  .final-block {
+    text-align: left;
+    padding-left: 40px;
+  }
+
+  /* OPCIONAL: añade margen izquierdo a los textos si lo ves muy junto aún */
+  .info,
+  .box {
+    padding-left: 10px;
+  }
+
+}

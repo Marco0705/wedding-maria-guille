@@ -1,0 +1,64 @@
+.inicio-banner {
+  width: 100%;
+ max-height: 70vh;
+  object-fit: contain; /* recorta para ocupar toda el área sin deformarse */
+  display: block;
+  margin-bottom: 2rem;
+  height: 350px;
+}
+
+.wedding-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+
+}
+
+
+/* Contenido principal */
+.main-content {
+  position: relative;
+  z-index: 1;
+  max-width: 90%;
+}
+
+/* Imagen inferior centrada */
+.bottom-space {
+  margin-top: 6rem; /* empuja la imagen hacia abajo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh; /* da altura al bloque inferior */
+}
+
+.numbers-bottom-center {
+  width: 700px;
+
+}
+
+/* Textos */
+.date-text {
+  font-style: italic;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+
+.invitation-text {
+  margin-top: 3rem;
+}
+
+.invitation-text h2 {
+  font-weight: 600;
+}
+
+.invitation-text p {
+ 
+  color: #333;
+}
+
