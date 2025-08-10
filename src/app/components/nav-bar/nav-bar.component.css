@@ -30,6 +30,7 @@
     @media (max-width: 768px) {
   .navbar {
     padding: 0 1.5rem; /* un poco menos de margen en móvil */
+    font-size: 0.8rem;;
   }
 
   .navbar ul {
