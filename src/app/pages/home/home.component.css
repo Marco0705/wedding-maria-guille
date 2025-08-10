@@ -69,5 +69,14 @@
     max-height: none; /* quitamos límite para que no la achique demasiado */
   }
 
+  .wedding-container {
+    display: flex;
+    flex-direction: column; /* mantiene orden para el resto */
+  }
+
+  .navbar-top-mobile {
+    order: 2; /* fuerza a ir después de la imagen */
+  }
+
 }
 
