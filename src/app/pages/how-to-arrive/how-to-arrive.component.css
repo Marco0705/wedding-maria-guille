@@ -162,6 +162,5 @@ body {
     margin-left: 0 !important;
     display: block;
     width: 100%; /* o un ancho fijo menor si quieres */
-    max-width: 300px; /* para que no se haga muy grande */
   }
 }
