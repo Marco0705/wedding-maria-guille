@@ -1,46 +1,52 @@
 .navbar {
-    text-align: center;
-    ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-  
-    a {
-      text-decoration: none;
-      color: black;
-      position: relative;
-      font-weight: 500;
-  
-  
-      &.active::after {
-        content: '';
-        display: block;
-        height: 2px;
-        background-color: black;
-        width: 100%;
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-      }
-    }
+  text-align: center;
+  padding: 0; /* quito padding global para controlar luego */
+}
 
-    @media (max-width: 768px) {
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  font-weight: 500;
+  font-size: 1rem; /* tamaño base */
+}
+
+.navbar a.active::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 100%;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
   .navbar {
-    padding: 0 1.5rem; /* un poco menos de margen en móvil */
-    font-size: 0.8rem;
+    padding: 0 1.5rem;
+    font-size: 0.8rem; /* reduce el tamaño base */
   }
 
   .navbar ul {
-    flex-wrap: wrap; /* que puedan bajar de línea si no caben */
-    justify-content: center; /* sigue centrado */
+    flex-wrap: wrap; /* permite bajar a otra línea */
+    justify-content: center;
     gap: 1rem;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
+  .navbar a {
+    font-size: 0.8rem; /* texto más pequeño */
   }
 }
-  
