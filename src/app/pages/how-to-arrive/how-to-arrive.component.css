@@ -118,50 +118,45 @@ body {
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: row !important; /* Forzar fila */
-    padding: 60px 40px; /* Igual que en escritorio */
+    flex-direction: column; /* Mejor que row para móvil */
+    padding: 20px 20px; /* Reducir padding para móvil */
   }
 
   .left-block,
   .right-block {
-    width: 45%; /* Igual que en escritorio */
+    width: 100%; /* Ocupan todo el ancho */
+    max-width: none;
+    padding-left: 0;
+    text-align: left; /* Asegurar alineación izquierda */
   }
 
   .container::before {
-    left: 50%; /* Línea centrada */
+    left: 50%;
     transform: translateX(-50%);
+    height: 100%; /* Asegura que línea cubra todo */
   }
 
   .dot {
-    left: 50%; /* Punto centrado */
-    transform: translateX(-50%);
-  }
-
-  .final-block::before {
     left: 50%;
     transform: translateX(-50%);
   }
 
-  .final-block {
-    text-align: center;
-    padding: 60px 20px 100px;
+  /* Para que la imagen quede justo a la izquierda de la línea */
+  .icon-finca {
+    margin-left: 0;
+    width: 50%; /* Ocupa hasta la línea vertical */
+    text-align: left;
   }
 
-  /* Ajusta márgenes si es necesario */
-  .block-after-ceremony {
-    margin-top: 160px;
-  }
-
-    .icon-finca {
-    text-align: left !important;
-    margin-left: 0 !important;
-    display: block;
-    width: 100%;
-  }
   .icon-finca img {
-    text-align: left !important;
-    margin-left: 0 !important;
+    width: 100%; /* La imagen ocupa el 100% del contenedor */
+    max-width: none;
     display: block;
-    width: 150%; 
+  }
+
+  /* Opcional: si quieres que el contenido derecho esté debajo */
+  .right-block {
+    margin-top: 20px;
   }
 }
+
