@@ -65,7 +65,7 @@
 @media (max-width: 768px) {
   .inicio-banner {
     width: 100%;
-    height: 100vh; /* ocupa toda la pantalla */
+    height: auto; /* ocupa toda la pantalla */
     object-fit: cover; /* se recorta pero llena */
   }
 
