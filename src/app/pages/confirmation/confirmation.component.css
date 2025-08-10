@@ -274,53 +274,46 @@ body {
   animation: slideDown 0.3s ease-out;
 }
 
-/* Ajustar SweetAlert en pantallas pequeñas */
+/* Añade esto al final de confirmation.component.css */
+
+/* Ajustes para pantallas móviles similares a los de la página principal */
 @media (max-width: 768px) {
-  .swal2-popup {
-    width: 90% !important;  /* que ocupe casi todo el ancho disponible */
-    font-size: 14px;        /* texto más compacto */
-    padding: 1rem !important;
-    box-sizing: border-box;
+  /* Reduce padding general */
+  .form-page-container {
+    padding: 30px 15px;
   }
 
-  .swal2-title {
-    font-size: 18px !important;
-    word-wrap: break-word;  /* evitar que el texto largo se corte */
+  /* Títulos más pequeños */
+  .form-header-text h1 {
+    font-size: 0.8rem; /* más pequeño */
   }
 
-  .swal2-html-container {
-    font-size: 14px !important;
-    word-wrap: break-word;
-    white-space: normal !important; /* asegura que el texto baje de línea */
-  }
-}
-
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animación para mensaje de éxito */
-.success-message {
-  animation: fadeIn 0.5s ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
+  /* Texto descriptivo más pequeño */
+  .form-header-text p,
+  .form-subtitle {
+    font-size: 0.5rem;
   }
 
-  
+  /* Reducir tamaño de texto dentro del navbar (si está dentro de un contenedor navbar-top-mobile) */
+  .navbar-top-mobile {
+    font-size: 0.8rem;
+  }
+
+  .navbar-top-mobile a,
+  .navbar-top-mobile span,
+  .navbar-top-mobile button {
+    font-size: 0.8rem !important;
+  }
+
+  /* Si el navbar no usa esta clase, ajusta aquí según la estructura real */
+
+  /* Ajusta también el tamaño de fuente de labels y botones para que se vea consistente */
+  .form-field label {
+    font-size: 0.75rem;
+  }
+
+  .submit-button {
+    font-size: 0.8rem;
+    padding: 12px 15px;
+  }
 }
