@@ -29,7 +29,7 @@
 
       <div class="form-field">
         <label for="direccion">DIRECCIÓN</label>
-        <input type="text" id="direccion" placeholder="Calle, número, puerta, CP, Municipio Ciudad" formControlName="direccion" [class.error]="hasError('direccion')" />
+        <input type="text" id="direccion" placeholder="Calle, número, puerta, CP, Municipio, Ciudad" formControlName="direccion" [class.error]="hasError('direccion')" />
         <div *ngIf="hasError('direccion')" class="error-message">
           {{ getErrorMessage("direccion") }}
         </div>

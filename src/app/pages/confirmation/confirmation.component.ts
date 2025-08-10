@@ -40,9 +40,7 @@ export class ConfirmationComponent implements OnInit {
       ]),
       acompanante: new FormControl(''),
       direccion: new FormControl('', [
-        Validators.required,
-        Validators.pattern(/^.+\s\d+.*,\s*.*,\s*\d{5},\s*.*,\s*.*$/),
-      ]),
+        Validators.required]),
       alergias: new FormControl(''),
       busOption: new FormControl('No', Validators.required),
       busStop: new FormControl(''),
@@ -76,10 +74,6 @@ export class ConfirmationComponent implements OnInit {
           default:
             return 'Este campo es obligatorio';
         }
-      }
-
-      if (field.errors['pattern']) {
-        return 'La dirección debe tener el formato: Calle, número, puerta, CP, Municipio Ciudad (Espaciado con comas)';
       }
 
       if (field.errors['minlength']) {
