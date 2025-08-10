@@ -156,8 +156,7 @@ body {
   }
 
   .icon-finca img {
-    width: auto;        /* Para evitar estiramientos extraños */
-    max-width: 300px;   /* Ajusta el tamaño máximo que quieras */
+    width: 100%;        /* Para evitar estiramientos extraños */
     height: auto;
     display: block;
     margin-left: 0;     /* Que no tenga margen izquierdo */
