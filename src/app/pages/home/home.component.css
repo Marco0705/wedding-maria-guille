@@ -69,24 +69,24 @@
 
   /* Títulos más pequeños */
   .invitation-text h1 {
-    font-size: 1.1rem; /* aún más pequeño */
+    font-size: 0.8rem; /* aún más pequeño */
   }
 
   /* Texto de párrafos */
   .invitation-text p {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
   }
 
   /* Reducir tamaño de texto dentro del navbar */
   .navbar-top-mobile {
-    font-size: 0.85rem; /* Ajusta según el tamaño que quieras */
+    font-size: 0.5rem; /* Ajusta según el tamaño que quieras */
   }
 
   /* Si el navbar usa etiquetas específicas, por ejemplo enlaces o spans, ajusta también */
   .navbar-top-mobile a,
   .navbar-top-mobile span,
   .navbar-top-mobile button {
-    font-size: 0.85rem;
+    font-size: 0.5rem;
   }
 
   /* Números abajo */
