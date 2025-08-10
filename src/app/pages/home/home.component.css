@@ -1,10 +1,10 @@
 .inicio-banner {
   width: 100%;
- max-height: 70vh;
+ max-height: 100vh;
   object-fit: contain; /* recorta para ocupar toda el área sin deformarse */
   display: block;
   margin-bottom: 2rem;
-  height: 350px;
+
 }
 
 .wedding-container {
