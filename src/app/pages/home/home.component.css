@@ -64,9 +64,10 @@
 
 @media (max-width: 768px) {
   .inicio-banner {
-    width: 100%;
-     max-height: 100vh;
-    max-height: none; /* quitamos límite para que no la achique demasiado */
+    width: 120%; /* un pelín más ancha para forzar altura mayor */
+    max-width: none;
+    height: auto;
+    transform: translateX(-10%); /* la centramos después del aumento de ancho */
   }
 
 }
