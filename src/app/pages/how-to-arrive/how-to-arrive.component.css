@@ -161,6 +161,6 @@ body {
   .icon-finca img {
     margin-left: 0 !important;
     display: block;
-    width: 100%; /* o un ancho fijo menor si quieres */
+    width: 200%; /* o un ancho fijo menor si quieres */
   }
 }
