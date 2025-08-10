@@ -79,7 +79,7 @@
 
   /* Reducir tamaño de texto dentro del navbar */
   .navbar-top-mobile {
-    font-size: 0.5rem; /* Ajusta según el tamaño que quieras */
+    font-size: 0.5rem; 
   }
 
   /* Si el navbar usa etiquetas específicas, por ejemplo enlaces o spans, ajusta también */
