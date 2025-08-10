@@ -66,20 +66,18 @@
   .inicio-banner {
     width: 100%;
     height: auto;
-    max-height: none; /* quitamos límite para que no la achique demasiado */
+    max-height: none;
   }
 
   .wedding-container {
     display: flex;
-    flex-direction: column; /* mantiene el orden base */
+    flex-direction: column;
   }
 
-  /* Este contenedor debe tener la clase .navbar-top-mobile en el HTML */
   .navbar-top-mobile {
-    order: 2; /* fuerza a ir después de la imagen */
+    order: 2; /* ahora sí se mueve debajo de la imagen */
   }
 
-  /* Títulos más pequeños en móvil */
   .invitation-text h1 {
     font-size: 1.8rem;
   }
@@ -88,5 +86,6 @@
     font-size: 1rem;
   }
 }
+
 
 
