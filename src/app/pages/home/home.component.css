@@ -62,3 +62,12 @@
   color: #333;
 }
 
+@media (max-width: 768px) {
+  .inicio-banner {
+    width: 100%;
+    height: auto;
+    max-height: none; /* quitamos límite para que no la achique demasiado */
+  }
+
+}
+
