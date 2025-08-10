@@ -118,38 +118,37 @@ body {
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
-    padding: 40px 20px;
-    padding-left: 40px; /* Añadido para más margen izquierdo */
+    flex-direction: row !important; /* Forzar fila */
+    padding: 60px 40px; /* Igual que en escritorio */
   }
 
   .left-block,
   .right-block {
-    width: 100%;
+    width: 45%; /* Igual que en escritorio */
   }
 
   .container::before {
-    left: 20px;
+    left: 50%; /* Línea centrada */
+    transform: translateX(-50%);
   }
 
   .dot {
-    left: 20px;
-    transform: translateX(0);
+    left: 50%; /* Punto centrado */
+    transform: translateX(-50%);
   }
 
   .final-block::before {
-    left: 20px;
-    transform: translateX(0);
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .final-block {
-    text-align: left;
-    padding-left: 40px;
+    text-align: center;
+    padding: 60px 20px 100px;
   }
 
-  /* OPCIONAL: añade margen izquierdo a los textos si lo ves muy junto aún */
-  .info,
-  .box {
-    padding-left: 10px;
+  /* Ajusta márgenes si es necesario */
+  .block-after-ceremony {
+    margin-top: 160px;
   }
 }
