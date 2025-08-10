@@ -65,11 +65,11 @@
 @media (max-width: 768px) {
   .inicio-banner {
     width: 100%;
-    height: auto; /* ocupa toda la pantalla */
-    object-fit: cover; /* se recorta pero llena */
+    height: 80vh; /* más alta en móvil */
+    object-fit: cover; /* llena el alto, puede recortar un poco */
   }
 
-  .bottom-space {
+    .bottom-space {
     margin-top: 4rem; /* menos margen para que no se pierda en scroll */
     height: auto; /* deja que crezca según contenido */
   }
@@ -78,6 +78,6 @@
     width: 90%; /* más adaptable en móvil */
     max-width: 400px; /* evita que se vea enorme */
   }
-}
 
+}
 
