@@ -137,7 +137,7 @@ export class ConfirmationComponent implements OnInit {
       icon: 'success',
       title: 'Confirmación enviada',
       text: '¡Tu asistencia ha sido confirmada con éxito! Gracias.',
-      timer: 5000,
+      timer: 2000,
       timerProgressBar: true,
       showConfirmButton: false,
     });
