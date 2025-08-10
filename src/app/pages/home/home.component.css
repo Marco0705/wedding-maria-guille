@@ -1,6 +1,6 @@
 .inicio-banner {
   width: 100%;
- max-height: 100vh;
+ max-height: 80vh;
   object-fit: contain; /* recorta para ocupar toda el área sin deformarse */
   display: block;
   margin-bottom: 2rem;
