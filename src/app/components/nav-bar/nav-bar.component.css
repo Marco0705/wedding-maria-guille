@@ -36,6 +36,8 @@
     flex-wrap: wrap; /* que puedan bajar de línea si no caben */
     justify-content: center; /* sigue centrado */
     gap: 1rem;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
   }
