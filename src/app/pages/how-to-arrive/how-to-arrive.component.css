@@ -118,22 +118,18 @@ body {
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* Mejor que row para móvil */
-    padding: 20px 20px; /* Reducir padding para móvil */
+    flex-direction: row !important; /* Mantener fila */
+    padding: 60px 40px;
   }
 
   .left-block,
   .right-block {
-    width: 100%; /* Ocupan todo el ancho */
-    max-width: none;
-    padding-left: 0;
-    text-align: left; /* Asegurar alineación izquierda */
+    width: 45%;
   }
 
   .container::before {
     left: 50%;
     transform: translateX(-50%);
-    height: 100%; /* Asegura que línea cubra todo */
   }
 
   .dot {
@@ -141,18 +137,31 @@ body {
     transform: translateX(-50%);
   }
 
-  /* Para que la imagen quede justo a la izquierda de la línea */
+  .final-block::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .final-block {
+    text-align: center;
+    padding: 60px 20px 100px;
+  }
+
+  /* Ajustes específicos para la finca */
   .icon-finca {
-    margin-left: 0;
-    width: 50%; /* Ocupa hasta la línea vertical */
-    text-align: left;
+    text-align: left !important;
+    margin-left: 0 !important;
+    display: block;
+    width: 100%; /* Ocupa todo el ancho del left-block */
   }
 
   .icon-finca img {
-    width: 100%; /* La imagen ocupa el 100% del contenedor */
-    max-width: none;
+    width: auto;        /* Para evitar estiramientos extraños */
+    max-width: 300px;   /* Ajusta el tamaño máximo que quieras */
+    height: auto;
     display: block;
+    margin-left: 0;     /* Que no tenga margen izquierdo */
   }
-
 }
+
 
