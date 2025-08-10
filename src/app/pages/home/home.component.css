@@ -59,22 +59,38 @@
 }
 
 @media (max-width: 768px) {
+  /* Ya tienes estos ajustes de ancho para imagen, navbar y contenido */
   .inicio-banner,
   .navbar-top-mobile,
   .main-content {
-    max-width: 100%; /* para que en móviles ocupe todo */
+    max-width: 100%;
     padding: 0 1rem;
   }
 
+  /* Títulos más pequeños */
   .invitation-text h1 {
-    font-size: 1.3rem;
+    font-size: 1.1rem; /* aún más pequeño */
   }
 
+  /* Texto de párrafos */
   .invitation-text p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
+  /* Reducir tamaño de texto dentro del navbar */
+  .navbar-top-mobile {
+    font-size: 0.85rem; /* Ajusta según el tamaño que quieras */
+  }
+
+  /* Si el navbar usa etiquetas específicas, por ejemplo enlaces o spans, ajusta también */
+  .navbar-top-mobile a,
+  .navbar-top-mobile span,
+  .navbar-top-mobile button {
+    font-size: 0.85rem;
+  }
+
+  /* Números abajo */
   .numbers-bottom-center {
-    max-width: 200px;
+    max-width: 150px;
   }
 }
