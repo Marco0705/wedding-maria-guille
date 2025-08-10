@@ -29,15 +29,15 @@
 
     @media (max-width: 768px) {
   .navbar {
-    padding: 0 20px; /* Margen izquierdo y derecho para móviles */
+    padding: 0 1.5rem; /* un poco menos de margen en móvil */
+  }
 
-    ul {
-      flex-direction: column; /* Opcional: mostrar los links en columna */
-      align-items: flex-start; /* Alinearlos a la izquierda */
-      gap: 1rem;
-    }
+  .navbar ul {
+    flex-wrap: wrap; /* que puedan bajar de línea si no caben */
+    justify-content: center; /* sigue centrado */
+    gap: 1rem;
+  }
+
   }
 }
-
-  }
   
