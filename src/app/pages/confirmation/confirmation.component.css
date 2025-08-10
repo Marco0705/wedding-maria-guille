@@ -274,6 +274,28 @@ body {
   animation: slideDown 0.3s ease-out;
 }
 
+/* Ajustar SweetAlert en pantallas pequeñas */
+@media (max-width: 768px) {
+  .swal2-popup {
+    width: 90% !important;  /* que ocupe casi todo el ancho disponible */
+    font-size: 14px;        /* texto más compacto */
+    padding: 1rem !important;
+    box-sizing: border-box;
+  }
+
+  .swal2-title {
+    font-size: 18px !important;
+    word-wrap: break-word;  /* evitar que el texto largo se corte */
+  }
+
+  .swal2-html-container {
+    font-size: 14px !important;
+    word-wrap: break-word;
+    white-space: normal !important; /* asegura que el texto baje de línea */
+  }
+}
+
+
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -299,4 +321,6 @@ body {
     opacity: 1;
     transform: scale(1);
   }
+
+  
 }
