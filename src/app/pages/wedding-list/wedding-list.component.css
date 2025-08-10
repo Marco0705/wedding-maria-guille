@@ -51,9 +51,8 @@
 }
 
 .account-number {
-  font-weight: 600;
-  color: #333;
-  letter-spacing: 1px;
+  font-style: italic;
+  color: #7e7979;
   margin-top: 1rem;
   white-space: nowrap; /* Prevent line breaks for the whole number */
 }
