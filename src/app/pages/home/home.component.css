@@ -1,104 +1,80 @@
-.inicio-banner {
-  width: 100%;
- max-height: 80vh;
-  object-fit: contain; /* recorta para ocupar toda el área sin deformarse */
-  display: block;
-  margin-bottom: 2rem;
-
-}
-
 .wedding-container {
   position: relative;
   min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* centra horizontalmente todo */
   text-align: center;
   padding: 2rem 1rem;
-
+  box-sizing: border-box; /* para que padding no afecte ancho */
 }
 
+.inicio-banner {
+  width: 100%;
+  max-width: 700px; /* limita el ancho máximo */
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 1.5rem;
+}
 
-/* Contenido principal */
+.navbar-top-mobile {
+  width: 100%;
+  max-width: 700px; /* igual que la imagen para que no se desborde */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
 .main-content {
-  position: relative;
+  max-width: 700px;
+  width: 100%;
   z-index: 1;
-  max-width: 90%;
 }
 
-/* Imagen inferior centrada */
+/* Ajustes para la imagen de números */
 .bottom-space {
-  margin-top: 6rem; /* empuja la imagen hacia abajo */
+  margin-top: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30vh; /* da altura al bloque inferior */
+  width: 100%;
 }
 
 .numbers-bottom-center {
-  width: 700px;
-
+  width: 90%;
+  
 }
 
 /* Textos */
-.date-text {
-  font-style: italic;
-  color: #6c757d;
-  margin-bottom: 2rem;
-}
-
-
-.invitation-text {
-  margin-top: 3rem;
-}
-
-.invitation-text h2 {
+.invitation-text h1 {
+  font-size: 1.5rem; /* tamaño más pequeño */
   font-weight: 600;
 }
 
 .invitation-text p {
- 
+  font-size: 1rem;
   color: #333;
 }
 
 @media (max-width: 768px) {
-  .inicio-banner {
-    width: 100%;
-    height: auto;
-    max-height: none;
+  .inicio-banner,
+  .navbar-top-mobile,
+  .main-content {
+    max-width: 100%; /* para que en móviles ocupe todo */
+    padding: 0 1rem;
   }
 
-  .wedding-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* aseguramos centrado */
-  }
-
-  /* Quitar el order para que navbar se mantenga debajo de la imagen */
-  .navbar-top-mobile {
-    order: 0; /* valor por defecto, mantiene posición debajo de imagen */
-    margin-bottom: 2rem; /* un poco de espacio abajo */
-  }
-
-  /* Reducir tamaño de los títulos */
   .invitation-text h1 {
-    font-size: 1.4rem; /* más pequeño */
-    font-weight: 600;
+    font-size: 1.3rem;
   }
 
   .invitation-text p {
     font-size: 0.9rem;
-    color: #333;
   }
 
-  /* Ajustar la imagen de números para pantallas pequeñas */
   .numbers-bottom-center {
-    width: 90%;
-    max-width: 300px;
+    max-width: 200px;
   }
 }
-
-
-
-
