@@ -39,7 +39,7 @@
   }
 
   .navbar ul {
-    flex-wrap: wrap; /* permite bajar a otra línea */
+    flex-wrap: nowrap; /* permite bajar a otra línea */
     justify-content: center;
     gap: 1rem;
     margin-left: 0;
