@@ -71,12 +71,22 @@
 
   .wedding-container {
     display: flex;
-    flex-direction: column; /* mantiene orden para el resto */
+    flex-direction: column; /* mantiene el orden base */
   }
 
+  /* Este contenedor debe tener la clase .navbar-top-mobile en el HTML */
   .navbar-top-mobile {
     order: 2; /* fuerza a ir después de la imagen */
   }
 
+  /* Títulos más pequeños en móvil */
+  .invitation-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .invitation-text p {
+    font-size: 1rem;
+  }
 }
+
 
