@@ -72,20 +72,33 @@
   .wedding-container {
     display: flex;
     flex-direction: column;
+    align-items: center; /* aseguramos centrado */
   }
 
+  /* Quitar el order para que navbar se mantenga debajo de la imagen */
   .navbar-top-mobile {
-    order: 2; /* ahora sí se mueve debajo de la imagen */
+    order: 0; /* valor por defecto, mantiene posición debajo de imagen */
+    margin-bottom: 2rem; /* un poco de espacio abajo */
   }
 
+  /* Reducir tamaño de los títulos */
   .invitation-text h1 {
-    font-size: 1.8rem;
+    font-size: 1.4rem; /* más pequeño */
+    font-weight: 600;
   }
 
   .invitation-text p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    color: #333;
+  }
+
+  /* Ajustar la imagen de números para pantallas pequeñas */
+  .numbers-bottom-center {
+    width: 90%;
+    max-width: 300px;
   }
 }
+
 
 
 
