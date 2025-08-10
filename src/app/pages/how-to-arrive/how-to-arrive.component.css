@@ -154,9 +154,5 @@ body {
     display: block;
   }
 
-  /* Opcional: si quieres que el contenido derecho esté debajo */
-  .right-block {
-    margin-top: 20px;
-  }
 }
 
