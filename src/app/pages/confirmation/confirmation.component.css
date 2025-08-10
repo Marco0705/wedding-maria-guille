@@ -285,13 +285,13 @@ body {
 
   /* Títulos más pequeños */
   .form-header-text h1 {
-    font-size: 0.8rem; /* más pequeño */
+    font-size: 1.1rem; /* más pequeño */
   }
 
   /* Texto descriptivo más pequeño */
   .form-header-text p,
   .form-subtitle {
-    font-size: 0.5rem;
+    font-size: 0.9rem;
   }
 
   /* Reducir tamaño de texto dentro del navbar (si está dentro de un contenedor navbar-top-mobile) */
