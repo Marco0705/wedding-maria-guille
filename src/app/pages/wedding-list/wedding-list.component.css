@@ -89,10 +89,26 @@
   font-style: italic;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
+  .japon-img {
+    width: 300px; /* Igual que en escritorio */
+  }
+
+  .names-img {
+    width: 150px;
+  }
+
+  .signature-section {
+    margin-top: 5rem; /* Más espacio entre imágenes */
+  }
+
   .main-title {
+    font-size: 1.1rem; /* Tamaño del título en móvil */
     letter-spacing: 2px;
+  }
+
+  .wedding-list-container {
+    padding: 20px 15px;
   }
 
   .main-content {
@@ -106,27 +122,5 @@
 
   .illustration {
     margin-top: 2rem;
-  }
-
-  .japon-img {
-    width: 120px; /* Further reduce size for smaller screens */
-  }
-
-  .names-img {
-    width: 150px; /* Further reduce size for smaller screens */
-  }
-
-  .wedding-list-container {
-    padding: 20px 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .japon-img {
-    width: 100px; /* Smallest size for very small screens */
-  }
-
-  .names-img {
-    width: 120px; /* Smallest size for very small screens */
   }
 }
