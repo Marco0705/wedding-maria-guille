@@ -13,4 +13,21 @@ body {
        font-family: 'Inter', sans-serif;
     font-size: 14px;
   }
+
+  @media (max-width: 768px) {
+  body {
+    font-size: 12px; /* reducir tamaño base en móvil */
+  }
+
+  .navbar-top-mobile,
+  .navbar-top-mobile * {
+    font-size: 0.8rem !important; /* tamaño más pequeño y forzado */
+    line-height: 1.2 !important;
+  }
+
+  a {
+    font-size: 0.8rem; /* para enlaces también */
+  }
+}
+
   

@@ -79,14 +79,14 @@
 
   /* Reducir tamaño de texto dentro del navbar */
   .navbar-top-mobile {
-    font-size: 0.5rem; 
+    font-size: 0.8rem; 
   }
 
   /* Si el navbar usa etiquetas específicas, por ejemplo enlaces o spans, ajusta también */
   .navbar-top-mobile a,
   .navbar-top-mobile span,
   .navbar-top-mobile button {
-    font-size: 0.5rem !important;
+    font-size: 0.8rem !important;
   }
 
   /* Números abajo */
