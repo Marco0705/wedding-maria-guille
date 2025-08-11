@@ -284,15 +284,17 @@ body {
   }
 
   /* Títulos más pequeños */
-  .form-header-text h1 {
-    font-size: 1.1rem; /* más pequeño */
+   h1 {
+     font-size: 1.1rem; 
+    letter-spacing: 2px;
+    margin-top: 20px;
   }
 
   /* Texto descriptivo más pequeño */
-  .form-header-text p,
+   p,
   .form-subtitle {
     font-size: 0.9rem;
-    margin-top: 100px;
+    margin-top: 20px;
   }
 
   /* Reducir tamaño de texto dentro del navbar (si está dentro de un contenedor navbar-top-mobile) */
