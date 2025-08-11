@@ -292,6 +292,7 @@ body {
   .form-header-text p,
   .form-subtitle {
     font-size: 0.9rem;
+    margin-top: 100px;
   }
 
   /* Reducir tamaño de texto dentro del navbar (si está dentro de un contenedor navbar-top-mobile) */

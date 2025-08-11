@@ -21,12 +21,12 @@ body {
 
   .navbar-top-mobile,
   .navbar-top-mobile * {
-    font-size: 0.8rem !important; /* tamaño más pequeño y forzado */
+    font-size: 0.7rem !important; /* tamaño más pequeño y forzado */
     line-height: 1.2 !important;
   }
 
   a {
-    font-size: 0.8rem; /* para enlaces también */
+    font-size: 0.5rem; /* para enlaces también */
   }
 }
 

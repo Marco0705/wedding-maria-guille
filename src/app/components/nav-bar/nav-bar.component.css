@@ -34,12 +34,12 @@
 /* Media query para móviles */
 @media (max-width: 768px) {
   .navbar {
-    padding: 0 1.5rem;
-    font-size: 0.8rem; /* reduce el tamaño base */
+    
+    font-size: 0.8rem !important; /* reduce el tamaño base */
   }
 
   .navbar ul {
-    flex-wrap: nowrap; /* permite bajar a otra línea */
+    flex-wrap: wrap; /* permite bajar a otra línea */
     justify-content: center;
     gap: 1rem;
     margin-left: 0;
