@@ -25,7 +25,7 @@ export class ConfirmationComponent implements OnInit {
   private http = inject(HttpClient);
 
   private SCRIPT_URL =
-    'https://script.google.com/macros/s/AKfycbwJ-ZiL1dIqInchUYDWCCTRvtU-dn5jf4ls-mLVYR5KF7a1uG6s5OrVrDTh5qyJEaaT/exec';
+    'https://script.google.com/macros/s/AKfycbzaXs5E2IhAlREijut4HRvuK7Ogm6FIc5L-uKRwiMVNc2jVLUainwr_oG1PeC8S36Pd/exec';
 
   ngOnInit(): void {
     this.createform();
@@ -38,9 +38,9 @@ export class ConfirmationComponent implements OnInit {
         Validators.required,
         Validators.minLength(3),
       ]),
+      asistencia: new FormControl('', Validators.required), // Nueva pregunta
       acompanante: new FormControl(''),
-      direccion: new FormControl('', [
-        Validators.required]),
+      direccion: new FormControl('', Validators.required),
       alergias: new FormControl(''),
       busOption: new FormControl('No', Validators.required),
       busStop: new FormControl(''),
@@ -89,26 +89,57 @@ export class ConfirmationComponent implements OnInit {
   }
 
   onSubmit(): void {
+    const asistenciaValue = this.form.get('asistencia')?.value;
+
+    // Caso asistencia = NO → enviar solo nombre y asistencia
+    if (asistenciaValue === 'No' && !this.isSubmitting) {
+      if (this.form.get('nombreCompleto')?.invalid) {
+        this.form.get('nombreCompleto')?.markAsTouched();
+        return;
+      }
+
+      this.isSubmitting = true;
+      const formData = new FormData();
+      formData.append(
+        'nombreCompleto',
+        this.form.get('nombreCompleto')?.value || ''
+      );
+      formData.append('asistencia', 'No');
+
+      this.http.post(this.SCRIPT_URL, formData).subscribe({
+        next: (response: any) => {
+          this.isSubmitting = false;
+          if (response.status === 'success') {
+            this.successMessageNoAsiste();
+            this.form.reset({ busOption: 'No' });
+          } else {
+            this.errorMessage();
+          }
+        },
+        error: () => {
+          this.isSubmitting = false;
+          this.errorMessage();
+        },
+      });
+      return;
+    }
+
+    // Caso asistencia = SÍ → enviar todo
     if (this.form.valid && !this.isSubmitting) {
       this.isSubmitting = true;
 
       const formData = new FormData();
-
       Object.keys(this.form.value).forEach((key) => {
         let value = this.form.value[key];
-
         if (key === 'alergias' && (!value || value.trim() === '')) {
           value = 'Ninguna';
         }
-
         if (key === 'acompanante' && (!value || value.trim() === '')) {
           value = 'Ninguno';
         }
-
         if (key === 'busStop' && this.form.get('busOption')?.value === 'No') {
           value = '';
         }
-
         formData.append(key, value || '');
       });
 
@@ -137,6 +168,17 @@ export class ConfirmationComponent implements OnInit {
       icon: 'success',
       title: 'Confirmación enviada',
       text: '¡Tu asistencia ha sido confirmada con éxito! Gracias.',
+      timer: 2000,
+      timerProgressBar: true,
+      showConfirmButton: false,
+    });
+  }
+
+  successMessageNoAsiste() {
+    Swal.fire({
+      icon: 'info',
+      title: 'Confirmación registrada',
+      text: 'Gracias por avisarnos, lamentamos que no puedas venir.',
       timer: 2000,
       timerProgressBar: true,
       showConfirmButton: false,
