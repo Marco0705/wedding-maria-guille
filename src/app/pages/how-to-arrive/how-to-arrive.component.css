@@ -55,6 +55,8 @@ body {
   text-align: left;
 }
 
+
+
 .icon-iglesia img {
   display: block;
   width: 160px; 
@@ -79,6 +81,11 @@ body {
 /* Textos */
 .info {
   margin-bottom: 6px;
+}
+
+.info-italic {
+  margin-bottom: 6px;
+  font-style: italic;
 }
 
 .info.time {
