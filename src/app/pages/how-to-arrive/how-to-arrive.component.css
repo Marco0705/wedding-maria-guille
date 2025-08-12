@@ -156,10 +156,11 @@ body {
   }
 
   .icon-finca img {
+    text-align: left !important;
     width: 120%;        /* Para evitar estiramientos extraños */
     height: 100;
     display: block;
-    margin-left: 0;  
+    margin-left: -20px;  
   }
 
   .navbar-top-mobile {
