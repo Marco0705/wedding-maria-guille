@@ -59,7 +59,7 @@
 }
 
 .japon-img {
-  width: 300px; /* Adjusted for better responsiveness and visual balance */
+  width: 500px; /* Adjusted for better responsiveness and visual balance */
   height: auto;
   display: block; /* Ensures image behaves as a block element for margin auto */
   margin: 0 auto; /* Center image within its container */
@@ -94,9 +94,7 @@
     width: 150px;
   }
 
-  .signature-section {
-    margin-top: 5rem; /* Más espacio entre imágenes */
-  }
+ 
 
   .main-title {
     font-size: 1.1rem; 
@@ -132,4 +130,11 @@
   .navbar-top-mobile button {
     font-size: 0.8rem !important;
   }
+
+  .japon-img {
+  width: 400px; /* Adjusted for better responsiveness and visual balance */
+  height: auto;
+  display: block; /* Ensures image behaves as a block element for margin auto */
+  margin: 0 auto; /* Center image within its container */
+}
 }

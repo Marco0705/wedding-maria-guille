@@ -291,13 +291,6 @@ body {
     margin-bottom: 40px;
   }
 
-  /* Texto descriptivo más pequeño */
-   p,
-  .form-subtitle {
-    font-size: 0.9rem;
-    margin-top: 20px;
-  }
-
   /* Reducir tamaño de texto dentro del navbar (si está dentro de un contenedor navbar-top-mobile) */
   .navbar-top-mobile {
     font-size: 0.8rem;
