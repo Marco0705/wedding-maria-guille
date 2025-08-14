@@ -16,7 +16,7 @@
   <div class="form-field">
     <label for="nombreCompleto">NOMBRE COMPLETO</label>
     <input type="text" id="nombreCompleto" formControlName="nombreCompleto"
-      [class.error]="hasError('nombreCompleto')" />
+      [class.error]="hasError('nombreCompleto')" placeholder="Nombre con dos apellidos"/>
     <div *ngIf="hasError('nombreCompleto')" class="error-message">
       {{ getErrorMessage("nombreCompleto") }}
     </div>
